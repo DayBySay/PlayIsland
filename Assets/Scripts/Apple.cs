@@ -17,9 +17,11 @@ public class Apple : MonoBehaviour {
 	public DoActionDelegate doAction;
 
 	void OnCollisionEnter(Collision collision) {
+		Debug.Log ("hoge");
 		if (doAction == null) {
 			return;
 		}
 
 		doAction ();
 	}
+}
