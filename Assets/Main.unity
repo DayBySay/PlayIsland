@@ -176,7 +176,7 @@ TerrainCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 52939590}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 39160357045d9ad479bae42bcdc8622e, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 1a7b87be8d9295e409041abd2de96829, type: 2}
   m_EnableTreeColliders: 1
@@ -286,8 +286,8 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 277316484}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 0.4
+  m_Drag: 0.01
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -300,7 +300,7 @@ SphereCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 277316484}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e5bd5136039cdeb45a3e94e34edc186c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -692,6 +692,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: af88c30b5cb73ad4fbe49dff3ca37545, type: 2}
+    - target: {fileID: 400002, guid: d61af084feef90842a5dc757cf278428, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -32.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: d61af084feef90842a5dc757cf278428, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d61af084feef90842a5dc757cf278428, type: 3}
   m_IsPrefabParent: 0
