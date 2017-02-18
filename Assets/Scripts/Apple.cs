@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UniRx;
 
 public class Apple : MonoBehaviour {
 	public enum STYLE {
@@ -13,15 +14,15 @@ public class Apple : MonoBehaviour {
 	[SerializeField]
 	private STYLE style;
 
-	public delegate void DoActionDelegate();
-	public DoActionDelegate doAction;
+    public void Catch()
+    {
+        StartCoroutine(CatchWithSeconds(0.2f));
+    }
 
-	void OnCollisionEnter(Collision collision) {
-		Debug.Log ("hoge");
-		if (doAction == null) {
-			return;
-		}
+    IEnumerator CatchWithSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
 
-		doAction ();
-	}
+        Destroy(gameObject);
+    }
 }
