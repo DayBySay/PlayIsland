@@ -404,6 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 431583997}
   - component: {fileID: 431583998}
+  - component: {fileID: 431583999}
   m_Layer: 0
   m_Name: ApplesPivot
   m_TagString: Untagged
@@ -453,6 +454,18 @@ MonoBehaviour:
   - {fileID: 589070817}
   - {fileID: 1482905506}
   - {fileID: 1130853872}
+--- !u!114 &431583999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431583996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642e81b5e54cb448965bed4a61de47b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limit: 60
 --- !u!1 &529587648 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013353096284, guid: 7ee080dbf56529c4eb7c415ee6b2504c,
