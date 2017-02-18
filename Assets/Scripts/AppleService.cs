@@ -42,4 +42,17 @@ public class AppleService : MonoBehaviour {
         Instantiate(apple);
         apple.transform.position = applePivots[(int)pivot].transform.position;
 	}
+
+    void Start()
+    {
+        StartCoroutine(loop());
+    }
+
+    IEnumerator loop()
+    {
+        yield return new WaitForSeconds(1);
+
+        CreateApple(Apple.STYLE.RED, (ApplePivot)System.Enum.ToObject(typeof(ApplePivot), (int)Random.Range(0, 7)));
+        StartCoroutine(loop());
+    }
 }
