@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UniRx;
+using System;
 
+[RequireComponent(typeof(Timer))]
 public class AppleService : MonoBehaviour {
     [SerializeField]
     private GameObject blueApple, redApple, goldApple;
@@ -37,22 +40,18 @@ public class AppleService : MonoBehaviour {
         right3,
     }
 
-	public void CreateApple(Apple.STYLE style, ApplePivot pivot) {
+    void Start()
+    {
+        Timer timer = GetComponent<Timer>();
+        timer.OnTimeChanged.Subscribe(time =>
+        {
+            CreateApple(Apple.STYLE.RED, (ApplePivot)System.Enum.ToObject(typeof(ApplePivot), (int)UnityEngine.Random.Range(0, 7)));
+        });
+    }
+
+    public void CreateApple(Apple.STYLE style, ApplePivot pivot) {
         GameObject apple = AppleWithStyle(style);
         Instantiate(apple);
         apple.transform.position = applePivots[(int)pivot].transform.position;
 	}
-
-    void Start()
-    {
-        StartCoroutine(loop());
-    }
-
-    IEnumerator loop()
-    {
-        yield return new WaitForSeconds(1);
-
-        CreateApple(Apple.STYLE.RED, (ApplePivot)System.Enum.ToObject(typeof(ApplePivot), (int)Random.Range(0, 7)));
-        StartCoroutine(loop());
-    }
 }
