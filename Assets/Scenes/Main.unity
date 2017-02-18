@@ -375,6 +375,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795102fa792928f4497a8792be9e7cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blueApple: {fileID: 1661500225339936, guid: a914c92f72a260e4e9b7f60d16a74f09, type: 2}
+  redApple: {fileID: 1661500225339936, guid: a914c92f72a260e4e9b7f60d16a74f09, type: 2}
+  goldApple: {fileID: 1661500225339936, guid: a914c92f72a260e4e9b7f60d16a74f09, type: 2}
   applePivots:
   - {fileID: 1253977208}
   - {fileID: 233484204}
