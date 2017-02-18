@@ -8,7 +8,10 @@ public class Timer : MonoBehaviour {
     private int limit = 60;
 
     private Subject<int> timerSubject = new Subject<int>();
-    public IObservable<int> OnTimeChanged;
+    public IObservable<int> OnTimeChanged
+    {
+        get { return timerSubject; }
+    }
 
     private void Start()
     {
