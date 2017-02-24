@@ -16,7 +16,7 @@ public class Apple : MonoBehaviour {
 
     public void Catch()
     {
-        StartCoroutine(CatchWithSeconds(0.2f));
+        StartCoroutine(CatchWithSeconds(0.05f));
     }
 
     IEnumerator CatchWithSeconds(float seconds)
