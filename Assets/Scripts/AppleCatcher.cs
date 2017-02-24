@@ -12,6 +12,8 @@ public class AppleCatcher : MonoBehaviour {
         }
 
         Apple apple = other.GetComponent<Apple>();
+        AudioSource source = apple.GetComponent<AudioSource> ();
+        source.PlayOneShot (source.clip);
         apple.Catch();
     }
 }
