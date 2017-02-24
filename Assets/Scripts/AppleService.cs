@@ -40,13 +40,12 @@ public class AppleService : MonoBehaviour {
         right3,
     }
 
-    void Start()
-    {
+    public void CreateApples() {
         Timer timer = GetComponent<Timer>();
         timer.OnTimeChanged.Subscribe(time =>
-        {
-            CreateApple(Apple.STYLE.RED, (ApplePivot)System.Enum.ToObject(typeof(ApplePivot), (int)UnityEngine.Random.Range(0, 7)));
-        });
+            {
+                CreateApple(Apple.STYLE.RED, (ApplePivot)System.Enum.ToObject(typeof(ApplePivot), (int)UnityEngine.Random.Range(0, 7)));
+            });
     }
 
     public void CreateApple(Apple.STYLE style, ApplePivot pivot) {
